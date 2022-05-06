@@ -1,0 +1,14 @@
+{
+  "name": "digital_akademia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass ./sass:./assets/css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.50.0"
+  }
+}

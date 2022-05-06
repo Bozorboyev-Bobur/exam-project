@@ -1,0 +1,39 @@
+@import url(/assets/css/fonts.css);
+ul, li, a, h1, h2, h3, h4, h5, h6, button, p {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Century Gothic";
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: var(--black);
+  background-color: #000000;
+}
+
+:root {
+  --orange: #ff6b00;
+  --white: #ffffff;
+  --black: #000000;
+  --grey: #241515;
+  --dark__orange: #f65c2c;
+}
+
+/*# sourceMappingURL=null.css.map */
