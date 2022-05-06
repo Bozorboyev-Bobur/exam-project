@@ -1,0 +1,720 @@
+@import "mixins/header";
+@import "includes/values";
+@import "includes/buttons";
+@import "mixins/modal";
+@import "includes/fonts";
+@import "mixins/footer";
+@import "mixins/absolute-center";
+
+body {
+  margin: 0;
+}
+
+.container {
+  @each $max_width in (100px, 768px, 480px) {
+    @media all and (max-width: $max_width) {
+      max-width: 1000px;
+    }
+  }
+}
+
+#header {
+  @include id_header(absolute);
+}
+
+.header {
+  @include navbar(absolute, white, transparent);
+}
+
+#main-window {
+  position: relative;
+  background: url("../images/bg-orange.svg") no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.main-window {
+  height: 872px;
+  padding-top: 289px;
+  display: flex;
+  flex-direction: row;
+
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+    h2 {
+      margin: 0;
+      font-family: "Century Gothic";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 90px;
+      line-height: 110px;
+      color: var(--white);
+      width: 910px;
+    }
+  }
+
+  &__btns {
+    max-width: 336px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .colorless-btn {
+      background-color: transparent;
+      border: 2px solid white;
+
+      @include btn(245px, 60px, white, transparent, 2px solid var(--white));
+      &:hover,
+      &:focus-visible {
+        @include colorless-btn__act(var(--white), 2px solid white, var(--dark__orange));
+      }
+    }
+
+    .player {
+      @include player_btn(57px);
+    }
+  }
+
+  &__img {
+    //img {
+    top: 150px;
+    width: 595.84px;
+    height: 365.96px;
+    position: relative;
+    right: 271px;
+    //}
+  }
+}
+
+.direction {
+  &__wrapper {
+    display: flex;
+    .col- {
+      &1 {
+        width: 186px;
+      }
+      &2 {
+        width: 245px;
+      }
+      &3 {
+        width: 360px;
+      }
+    }
+    .colorless-btn {
+      @include btn(auto, 60px, var(--black), transparent, 2px solid var(--dark__orange));
+      min-width: 186px;
+      &:hover,
+      &:focus-visible {
+        @include colorless-btn__act(var(--dark__orange), none, var(--white));
+      }
+    }
+  }
+
+  .second-block__informations-containers {
+    height: 304px;
+    display: flex;
+    justify-content: space-between;
+    padding: 43px 53px;
+    margin-top: 50px;
+    box-shadow: rgb(38 38 38 / 10%) 0px 15px 70px;
+    border-radius: 25px;
+  }
+  .informations-container__title{
+    font-size: 26px;
+    font-family: var(--bold-font);
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .informations-container-inputs input {
+    margin: 0 15px 0 0;
+  }
+  .second-block__informations-container p{
+    text-align: center;
+    margin: 20px 0 42px 0;
+  }
+  .informations-container__button {
+    width: 144px;
+    height: 35px;
+    font-size: 11px;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid var(--orange);
+    border-radius: 50px;
+    transition-duration: .2s;
+    color: var(--black);
+    font-family: var(--bold-font);
+    margin-left: 118px;
+  }
+  .informations-container__button:hover {
+    background-color:var(--orange);
+    color: var(--white);
+  }
+  .informations-container-inputs__item {
+    margin-bottom: 20px;
+  }
+  /* ! Input radios */
+  .informations-container-inputs__item input {
+    display: none;
+  }
+  .informations-container-inputs__item label{
+    margin-left: 30px;
+  }
+  .informations-container__decor {
+    margin: auto 0;
+  }
+  .check-style {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border:2px solid var(--orange);
+    margin-left: -30px;
+    transition: 0.1s;
+  }
+  .informations-container-inputs__item input:checked + .check-style{
+    content: '';
+    border: 6px solid var(--orange);
+  }
+  /* ?-------------------------------Input radio---------------------------- */
+  .informations-container .informations-container-input__range {
+    -webkit-appearance:none;
+    width: 258px;
+    height: 2px;
+    outline: none;
+    background-color: var(--orange);
+  }
+  .informations-container .informations-container-input__range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    background-color: var(--white);
+    border: 2px solid var(--black);
+    border-radius: 9999px;
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+.search-result__wrapper {
+  &::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 50%;
+
+    &-track {
+      background: #f1f1f1;
+    }
+
+    &-thumb {
+      background: #888;
+      :hover {
+        background: #555;
+      }
+    }
+  }
+  border-radius: 45px;
+  // box-shadow: 4px 12px 2px 13px rgba(207, 207, 207, 0.651);
+  // background-color: rgba(207, 207, 207, 0.404);
+  padding: 9px 15px 0px 15px;
+  flex-direction: row;
+  width: 105%;
+  max-height: 550px;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+.search-result__course-cards {
+  width: 100%;
+  height: 490px;
+  flex-wrap: wrap;
+  .course-card {
+    margin-bottom: 15px;
+    padding: 17px 30px 26px 26px;
+    cursor: pointer;
+    .container {
+      max-height: 192px;
+      max-width: 597px;
+      margin: auto;
+      height: 100%;
+    }
+    // @include btn(597px, 235px, black, transparent, none, none);
+    @include inner-window(none, 597px, 235px, 2px solid #f65c2c, 30px, column);
+    &:hover {
+      @include colorless-btn__act(var(--dark__orange), none, var(--white));
+      outline: none;
+      *:not(button) {
+        color: var(--white);
+      }
+    }
+    &__name {
+      width: min-content;
+      // max-width: fit-content;
+      & > * {
+        font-family: "Century Gothic";
+        font-style: normal;
+        line-height: 31px;
+        color: #262626;
+        font-weight: 400;
+        font-size: 20px;
+        h3 {
+          font-weight: 700;
+          font-size: 25px;
+        }
+      }
+    }
+
+    &__logo {
+      margin: auto;
+    }
+
+    &__submit-btn {
+      margin: auto 0;
+      button {
+        @include btn(144px, 35px, #000, var(--white), 2px solid var(--orange));
+        font-family: "Century Gothic";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+
+    &__info {
+      margin-top: auto;
+      justify-content: space-evenly;
+      max-width: 527px;
+      max-height: 18px;
+      * {
+        margin: 0;
+      }
+      :first-child {
+        font-family: "Century Gothic";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+        color: #262626;
+      }
+      :not(:first-child) {
+        color: transparent;
+      }
+
+      span {
+        width: 1px;
+        height: 16px;
+        border: 1px solid #ffffff;
+      }
+    }
+  }
+}
+
+.teachers {
+  margin-top: 130px;
+  // border: 2px solid black;
+  height: 947px;
+  max-width: 1219px;
+  &__substance {
+    max-height: 672px;
+    margin-top: 90px;
+  }
+  &__title {
+    h2 {
+      margin: 0;
+    }
+    font-family: "Century Gothic";
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 96.36px;
+    color: #262626;
+    max-width: 506px;
+    max-height: 369px;
+    span {
+      font-weight: 400;
+      font-family: inherit;
+    }
+  }
+  &__info {
+    max-width: 426px;
+    max-height: 113px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  &__name {
+    h3 {
+      margin: 0;
+      font-family: "Century Gothic";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 61px;
+      color: var(--black);
+    }
+  }
+
+  &__prof {
+    p {
+      margin: 20px 0 0 0;
+      font-family: "Century Gothic";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 35px;
+      line-height: 43px;
+      color: var(--black);
+    }
+  }
+  &__wrapper {
+    flex-direction: row;
+    position: relative;
+    display: flex;
+    max-width: 800px;
+    height: 800px;
+    /* border: 2px solid green; */
+    border-radius: 50%;
+    background: linear-gradient(180deg, #fa8448 0%, #f55728 100%);
+    align-self: flex-end;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    align-items: center;
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
+    // margin-left: 14px;
+    // margin: ;
+    position: relative;
+    button {
+      // background-color: black;
+      width: 100%;
+      height: 23px;
+    }
+  }
+  &__img {
+    display: flex;
+    /* width: 475px; */
+    position: absolute;
+    /* left: 0; */
+    /* right: 0; */
+    bottom: 0;
+    /* height: 744px; */
+    justify-content: center;
+    img {
+      // max-height: 745px;
+      width: 604px;
+      height: 100%;
+      border-radius: 260px;
+    }
+  }
+}
+
+.system-way {
+  margin-top: 130px;
+  &__title {
+    * {
+      font-family: "Century Gothic";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 70px;
+      line-height: 86px;
+      color: #262626;
+    }
+    span {
+      font-weight: 400;
+    }
+    max-width: 729px;
+    max-height: 172px;
+  }
+
+  &__wrapper {
+    &-btn {
+      display: none;
+    }
+  }
+
+  &__cards {
+    max-height: 284px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  .card {
+    text-align: center;
+    max-width: 219px;
+    max-height: 284px;
+    &__title {
+      h3 {
+        font-family: "Century Gothic";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 31px;
+        color: #262626;
+      }
+    }
+
+    &__logo {
+      border: 2px solid var(--orange);
+      border-radius: 50%;
+      width: 219px;
+      height: 219px;
+
+      img {
+        max-width: 56%;
+        margin: auto;
+      }
+    }
+  }
+}
+
+.playlist {
+  margin-top: 130px;
+  &__title {
+    * {
+      font-family: "Century Gothic";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 70px;
+      line-height: 86px;
+      /* identical to box height */
+
+      color: #262626;
+      text-align: center;
+      margin: 0;
+    }
+    margin-bottom: 50px;
+  }
+
+  &__player {
+    width: 100%;
+    flex-wrap: wrap;
+
+    .col-12 {
+      height: 690px;
+    }
+
+    .col-12,
+    col-md-12 {
+      iframe {
+        width: 100%;
+      }
+    }
+
+    .col-lg-6,
+    .col-xl-6 {
+      height: 485px;
+      iframe {
+        width: 66, 6667%;
+      }
+    }
+
+    .youtube__player {
+      margin-bottom: 10px;
+      iframe {
+        height: 100%;
+        * {
+          svg {
+            display: none;
+          }
+
+          .ytp-gradient-top {
+            display: none;
+          }
+          .ytp-chrome-top .ytp-show-cards-title {
+            display: none !important;
+          }
+          a .ytp-watermark .yt-uix-sessionlink {
+            display: none;
+          }
+          .ytp-cued-thumbnail-overlay {
+            button * {
+              .ytp-large-play-button .ytp-button {
+                svg {
+                  display: none;
+                }
+                // @include player-btn(121px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-info {
+  margin-top: 50px;
+  justify-content: space-between;
+  &:nth-child(odd) {
+    flex-direction: row;
+    .main-info__content {
+      .main-info__title {
+        h2 {
+          margin: 0;
+        }
+      }
+      margin-right: 20px;
+    }
+  }
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+    .main-info__content {
+      .main-info__title {
+        h2 {
+          text-align: right;
+          margin: 0 0 0 auto;
+        }
+      }
+      margin-left: 20px;
+    }
+  }
+
+  &__content {
+    font-family: "Century Gothic";
+    max-width: 598px;
+    max-height: 552px;
+    color: var(--black);
+  }
+
+  &__title {
+    h2 {
+      max-width: 454px;
+      max-height: 214px;
+      font-size: 100px;
+      line-height: 96px;
+      font-weight: 400;
+      font-family: inherit;
+      b {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin-top: 55px;
+  }
+
+  &__subtitle,
+  &__topic {
+    max-width: 598px;
+    max-height: 283px;
+    b {
+      font-weight: 700;
+    }
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+
+.registration {
+  margin: 130px 0;
+  &__title {
+    h2 {
+      font-family: "Century Gothic";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 6.5em;
+      line-height: 1.2;
+      color: var(--black);
+      margin: 0;
+    }
+    margin-bottom: 50px;
+  }
+
+  &__modal {
+    margin: auto;
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      padding: 27px 50px;
+      margin: 0 0 40px 0;
+      display: inline-block;
+      border: 2px solid #ff6b00;
+      border-radius: 50px;
+      background: white;
+
+      &::placeholder,
+      &::placeholder,
+      &::placeholder {
+        color: #676767;
+      }
+
+      &:focus,
+      &:focus,
+      &:focus {
+        background-color: rgba(217, 213, 213, 0.139);
+        outline: none;
+      }
+    }
+
+    button {
+      @include btn(245px, 60px, white, var(--orange), none);
+    }
+  }
+
+  &__contact-img img {
+    max-width: 235px;
+    transform: rotate(8.51deg);
+  }
+}
+
+.modal__input {
+  width: 100%;
+  height: 521px;
+  border-radius: 50px;
+  background: #ffffff;
+  box-shadow: 0px 20px 50px rgba(38, 38, 38, 0.1);
+}
+
+.body-active {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(41, 41, 41, 0.6);
+  background-size: cover;
+  z-index: 1;
+}
+
+.registration-active {
+  margin: 0;
+  box-shadow: 0px 20px 50px rgb(38 38 38 / 10%);
+  border-radius: 50px;
+  max-height: 700px;
+  height: 100%;
+  max-width: 1200px;
+  width: 100%;
+  z-index: 3;
+  background-color: #ffffff;
+  @include absolute-center;
+
+  .registration__title {
+    h2 {
+      font-family: "Century Gothic";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 3em;
+      line-height: 1.5;
+      color: var(--black);
+      margin: 0;
+    }
+    margin-bottom: 50px;
+  }
+
+  .modal__input {
+    border: none;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    height: auto;
+  }
+}

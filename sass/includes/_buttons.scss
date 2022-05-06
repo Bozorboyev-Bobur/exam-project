@@ -1,0 +1,49 @@
+@mixin btn($width, $btn_height, $color, $bg-color, $border, $text-align:center) {
+  width: $width;
+  height: $btn_height;
+  color: $color;
+  cursor: pointer;
+  font-family: var(--bold-font);
+  font-size: 25px;
+  text-align: $text-align;
+  border-radius: 50px;
+  background-color: $bg-color;
+      border: $border;
+}
+
+button:not(.player):focus {
+  color: var(--white);
+  background-color: var(--light__orange);
+  border: none;
+  outline: thick ridge var(--light__orange);
+}
+
+//this mixin is used for colorless-btn of :focus-visible, :hover mode
+@mixin colorless-btn__act($bg-color, $border, $color) {
+  outline: thick ridge var(--light__orange);
+  border: $border;
+  color: $color;
+  background-color: $bg-color;
+}
+
+//this mixin is used for colorful-btn of :focus-visible, :hover mode
+@mixin colorful-btn__act {
+  height: 150% ;
+  font-size: 30px;
+}
+
+.colorful-btn {
+  background-color: var(--orange);
+  border: none;
+  color: white;
+}
+
+@mixin player-btn($width) {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  width: $width;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url("../images/play.svg");
+}

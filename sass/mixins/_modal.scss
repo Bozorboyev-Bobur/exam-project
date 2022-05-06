@@ -1,0 +1,9 @@
+@mixin inner-window($box-shadow, $width, $height, $border, $border-radius, $flex-direction) {
+  display: flex;
+  flex-direction: $flex-direction;
+  width: $width;
+  height: $height;
+  border: $border;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+}

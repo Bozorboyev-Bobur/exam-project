@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Academia</title>
+    <link rel="icon" href="/assets/images/icons/logo-vector.svg">
+    <link rel="stylesheet" href="../assets/css/bootstrap-grid.min.css">
+    <!--    <link rel="stylesheet" href="/assets/css/style.css">-->
+    <link rel="stylesheet" href="../assets/css/index.css">
+</head>
+
+<body>
+    <div class="deactive"></div>
+    <header id="header">
+        <div class="container">
+            <div class="header">
+                <div class="site-logo">
+                    <a href="index.html">
+                        <svg width="218" height="59" viewBox="0 0 218 59" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M92.9907 10.5274H98.619C102.248 10.5274 104.943 10.982 106.711 11.8855C108.473 12.7892 109.928 14.2582 111.07 16.2983C112.212 18.3331 112.78 20.7114 112.78 23.4337C112.78 25.3694 112.461 27.1471 111.824 28.7679C111.186 30.3884 110.299 31.7352 109.175 32.8078C108.05 33.8747 106.833 34.615 105.523 35.0288C104.213 35.4369 101.941 35.6408 98.7064 35.6408H92.9907V10.5274ZM97.7209 15.1443V30.9888H99.9235C102.097 30.9888 103.668 30.738 104.648 30.2369C105.627 29.7355 106.427 28.8901 107.047 27.7068C107.668 26.5235 107.981 25.0661 107.981 23.3288C107.981 20.6649 107.239 18.5953 105.761 17.1263C104.427 15.8028 102.283 15.1443 99.332 15.1443H97.7209ZM116.96 10.5274H121.689V35.6408H116.96V10.5274ZM150.128 14.6311L146.783 17.96C144.667 15.7098 142.198 14.5846 139.381 14.5846C136.929 14.5846 134.871 15.4007 133.213 17.0391C131.555 18.6771 130.726 20.6649 130.726 23.0083C130.726 25.4275 131.584 27.4797 133.306 29.1642C135.027 30.8491 137.149 31.6887 139.67 31.6887C141.311 31.6887 142.696 31.3386 143.821 30.645C144.945 29.9512 145.855 28.8669 146.545 27.3862H139.317V22.9093H151.872L151.907 23.9646C151.907 26.162 151.339 28.2432 150.208 30.2136C149.072 32.1782 147.606 33.6821 145.809 34.7199C144.006 35.7514 141.891 36.2707 139.467 36.2707C136.876 36.2707 134.564 35.7049 132.529 34.5741C130.494 33.4373 128.889 31.8284 127.701 29.7355C126.518 27.6371 125.927 25.381 125.927 22.9558C125.927 19.6329 127.022 16.7414 129.207 14.2873C131.799 11.3611 135.178 9.89771 139.334 9.89771C141.508 9.89771 143.542 10.2998 145.438 11.1103C147.032 11.7921 148.597 12.9698 150.128 14.6311ZM155.901 10.5274H160.631V35.6408H155.901V10.5274ZM163.546 10.5274H177.354V15.2491H172.797V35.6408H167.963V15.2491H163.546V10.5274ZM188.222 10.5274H193.01L202.621 35.6408H197.676L195.729 30.4644H185.492L183.498 35.6408H178.554L188.222 10.5274ZM190.622 17.202L187.237 25.8473H193.99L190.622 17.202ZM206.278 10.5274H211.009V31.0939H217.999V35.6408H206.278V10.5274Z"
+                                fill="white" />
+                            <path
+                                d="M159.176 41.2725H160.799L164.054 49.7807H162.379L161.719 48.0268H158.252L157.576 49.7807H155.901L159.176 41.2725ZM159.989 43.5336L158.843 46.4629H161.13L159.989 43.5336ZM165.317 41.2725H166.943V44.2152L169.233 41.2725H171.175L168.219 45.0704L171.461 49.7807H169.551L166.943 45.9908V49.7807H165.317V41.2725ZM175.198 41.2725H176.82L180.076 49.7807H178.401L177.741 48.0268H174.273L173.598 49.7807H171.923L175.198 41.2725ZM176.011 43.5336L174.864 46.4629H177.152L176.011 43.5336ZM181.338 41.2725H183.245C184.475 41.2725 185.388 41.4265 185.987 41.7325C186.584 42.0385 187.076 42.5364 187.463 43.2278C187.85 43.917 188.043 44.7228 188.043 45.645C188.043 46.3008 187.935 46.9033 187.719 47.4521C187.503 48.0013 187.202 48.4576 186.821 48.8208C186.44 49.1823 186.028 49.4331 185.584 49.5733C185.14 49.7117 184.371 49.7807 183.275 49.7807H181.338V41.2725ZM182.941 42.8366V48.2045H183.687C184.423 48.2045 184.956 48.1198 185.288 47.9499C185.619 47.7802 185.89 47.4937 186.101 47.0926C186.311 46.6918 186.417 46.1982 186.417 45.6094C186.417 44.7067 186.166 44.0057 185.665 43.5083C185.213 43.0597 184.486 42.8366 183.487 42.8366H182.941ZM189.588 41.2725H194.206V42.8605H191.19V44.3889H194.206V45.9532H191.19V48.1929H194.206V49.7807H189.588V41.2725ZM196.514 41.2725H198.075L200.044 47.2073L202.024 41.2725H203.581L204.999 49.7807H203.446L202.542 44.407L200.751 49.7807H199.33L197.546 44.407L196.626 49.7807H195.055L196.514 41.2725Z"
+                                fill="white" />
+                            <path
+                                d="M213.121 41.2725H214.744L217.999 49.7807H216.324L215.664 48.0268H212.197L211.521 49.7807H209.846L213.121 41.2725ZM213.934 43.5336L212.788 46.4629H215.075L213.934 43.5336Z"
+                                fill="white" />
+                            <path d="M206.331 41.2725H208.744V49.7807H207.142V42.7892H205.398L206.331 41.2725Z"
+                                fill="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.6803 14.1222C24.3979 15.5027 35.6896 19.3838 34.3167 27.1454C32.9442 34.9069 19.4268 43.6091 11.709 42.2286C3.99165 40.8479 -1.15169 33.437 0.220989 25.6755C1.59367 17.9143 8.96295 12.7413 16.6803 14.1222ZM20.8066 12.3868C24.2718 5.06255 31.6969 -0.000488281 40.2991 -0.000488281C52.2145 -0.000488281 61.8744 9.71409 61.8744 21.6975C61.8744 28.1631 59.0619 33.9685 54.6007 37.9436C50.7936 41.3356 45.7853 43.3954 40.2991 43.3954C35.6965 43.3954 31.4313 41.9452 27.9287 39.4755C32.7362 35.9664 36.5393 31.4402 37.2983 27.1499C38.691 19.2751 29.3896 14.6779 20.8066 12.3868ZM18.0808 11.6339C15.5392 11.1471 13.3097 10.9379 10.7448 11.465C9.86777 9.89114 9.69908 7.53318 10.4899 5.7233C11.5854 3.21514 15.0978 1.69048 17.666 2.60872C19.5037 3.26678 20.8575 4.68884 21.4027 6.39276C20.0969 7.97688 18.9694 9.75568 18.0808 11.6339ZM81.8305 29.247C79.1567 29.7251 75.2447 31.0698 75.7203 33.7591C76.1957 36.448 80.879 39.463 83.5528 38.9846C86.2266 38.5063 88.0087 35.9386 87.5331 33.2496C87.0574 30.5606 84.5043 28.7686 81.8305 29.247ZM79.771 21.5231C79.0954 24.9739 76.6978 27.6497 73.62 28.5889C72.9792 28.7843 72.3086 28.8891 71.6194 28.9251C69.5519 27.4626 67.1871 26.3971 64.6342 25.8376C64.8135 24.6424 64.9071 23.4188 64.9071 22.1733C64.9071 19.5226 64.4846 16.9717 63.706 14.5827C63.9272 14.2621 64.1677 13.9599 64.4299 13.6799C66.6356 11.3248 70.0851 10.3558 73.4586 11.2821C77.4875 12.3883 80.5774 17.4009 79.771 21.5231ZM45.5249 45.0182C46.1783 52.846 52.7019 58.9947 60.6548 58.9947C69.0409 58.9947 75.8397 52.1576 75.8397 43.7235C75.8397 36.4054 70.7208 30.2904 63.8876 28.8002C61.4036 37.2049 54.2933 43.6064 45.5249 45.0182Z"
+                                fill="white" />
+                        </svg>
+                        <h1>Digital Academy</h1>
+                    </a>
+                </div>
+                <nav class="header__nav navbar">
+                    <div class="site-logo_inner">
+                        <a href="index.html">
+                            <svg width="218" height="59" viewBox="0 0 218 59" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M92.9907 10.5274H98.619C102.248 10.5274 104.943 10.982 106.711 11.8855C108.473 12.7892 109.928 14.2582 111.07 16.2983C112.212 18.3331 112.78 20.7114 112.78 23.4337C112.78 25.3694 112.461 27.1471 111.824 28.7679C111.186 30.3884 110.299 31.7352 109.175 32.8078C108.05 33.8747 106.833 34.615 105.523 35.0288C104.213 35.4369 101.941 35.6408 98.7064 35.6408H92.9907V10.5274ZM97.7209 15.1443V30.9888H99.9235C102.097 30.9888 103.668 30.738 104.648 30.2369C105.627 29.7355 106.427 28.8901 107.047 27.7068C107.668 26.5235 107.981 25.0661 107.981 23.3288C107.981 20.6649 107.239 18.5953 105.761 17.1263C104.427 15.8028 102.283 15.1443 99.332 15.1443H97.7209ZM116.96 10.5274H121.689V35.6408H116.96V10.5274ZM150.128 14.6311L146.783 17.96C144.667 15.7098 142.198 14.5846 139.381 14.5846C136.929 14.5846 134.871 15.4007 133.213 17.0391C131.555 18.6771 130.726 20.6649 130.726 23.0083C130.726 25.4275 131.584 27.4797 133.306 29.1642C135.027 30.8491 137.149 31.6887 139.67 31.6887C141.311 31.6887 142.696 31.3386 143.821 30.645C144.945 29.9512 145.855 28.8669 146.545 27.3862H139.317V22.9093H151.872L151.907 23.9646C151.907 26.162 151.339 28.2432 150.208 30.2136C149.072 32.1782 147.606 33.6821 145.809 34.7199C144.006 35.7514 141.891 36.2707 139.467 36.2707C136.876 36.2707 134.564 35.7049 132.529 34.5741C130.494 33.4373 128.889 31.8284 127.701 29.7355C126.518 27.6371 125.927 25.381 125.927 22.9558C125.927 19.6329 127.022 16.7414 129.207 14.2873C131.799 11.3611 135.178 9.89771 139.334 9.89771C141.508 9.89771 143.542 10.2998 145.438 11.1103C147.032 11.7921 148.597 12.9698 150.128 14.6311ZM155.901 10.5274H160.631V35.6408H155.901V10.5274ZM163.546 10.5274H177.354V15.2491H172.797V35.6408H167.963V15.2491H163.546V10.5274ZM188.222 10.5274H193.01L202.621 35.6408H197.676L195.729 30.4644H185.492L183.498 35.6408H178.554L188.222 10.5274ZM190.622 17.202L187.237 25.8473H193.99L190.622 17.202ZM206.278 10.5274H211.009V31.0939H217.999V35.6408H206.278V10.5274Z"
+                                    fill="white" />
+                                <path
+                                    d="M159.176 41.2725H160.799L164.054 49.7807H162.379L161.719 48.0268H158.252L157.576 49.7807H155.901L159.176 41.2725ZM159.989 43.5336L158.843 46.4629H161.13L159.989 43.5336ZM165.317 41.2725H166.943V44.2152L169.233 41.2725H171.175L168.219 45.0704L171.461 49.7807H169.551L166.943 45.9908V49.7807H165.317V41.2725ZM175.198 41.2725H176.82L180.076 49.7807H178.401L177.741 48.0268H174.273L173.598 49.7807H171.923L175.198 41.2725ZM176.011 43.5336L174.864 46.4629H177.152L176.011 43.5336ZM181.338 41.2725H183.245C184.475 41.2725 185.388 41.4265 185.987 41.7325C186.584 42.0385 187.076 42.5364 187.463 43.2278C187.85 43.917 188.043 44.7228 188.043 45.645C188.043 46.3008 187.935 46.9033 187.719 47.4521C187.503 48.0013 187.202 48.4576 186.821 48.8208C186.44 49.1823 186.028 49.4331 185.584 49.5733C185.14 49.7117 184.371 49.7807 183.275 49.7807H181.338V41.2725ZM182.941 42.8366V48.2045H183.687C184.423 48.2045 184.956 48.1198 185.288 47.9499C185.619 47.7802 185.89 47.4937 186.101 47.0926C186.311 46.6918 186.417 46.1982 186.417 45.6094C186.417 44.7067 186.166 44.0057 185.665 43.5083C185.213 43.0597 184.486 42.8366 183.487 42.8366H182.941ZM189.588 41.2725H194.206V42.8605H191.19V44.3889H194.206V45.9532H191.19V48.1929H194.206V49.7807H189.588V41.2725ZM196.514 41.2725H198.075L200.044 47.2073L202.024 41.2725H203.581L204.999 49.7807H203.446L202.542 44.407L200.751 49.7807H199.33L197.546 44.407L196.626 49.7807H195.055L196.514 41.2725Z"
+                                    fill="white" />
+                                <path
+                                    d="M213.121 41.2725H214.744L217.999 49.7807H216.324L215.664 48.0268H212.197L211.521 49.7807H209.846L213.121 41.2725ZM213.934 43.5336L212.788 46.4629H215.075L213.934 43.5336Z"
+                                    fill="white" />
+                                <path d="M206.331 41.2725H208.744V49.7807H207.142V42.7892H205.398L206.331 41.2725Z"
+                                    fill="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M16.6803 14.1222C24.3979 15.5027 35.6896 19.3838 34.3167 27.1454C32.9442 34.9069 19.4268 43.6091 11.709 42.2286C3.99165 40.8479 -1.15169 33.437 0.220989 25.6755C1.59367 17.9143 8.96295 12.7413 16.6803 14.1222ZM20.8066 12.3868C24.2718 5.06255 31.6969 -0.000488281 40.2991 -0.000488281C52.2145 -0.000488281 61.8744 9.71409 61.8744 21.6975C61.8744 28.1631 59.0619 33.9685 54.6007 37.9436C50.7936 41.3356 45.7853 43.3954 40.2991 43.3954C35.6965 43.3954 31.4313 41.9452 27.9287 39.4755C32.7362 35.9664 36.5393 31.4402 37.2983 27.1499C38.691 19.2751 29.3896 14.6779 20.8066 12.3868ZM18.0808 11.6339C15.5392 11.1471 13.3097 10.9379 10.7448 11.465C9.86777 9.89114 9.69908 7.53318 10.4899 5.7233C11.5854 3.21514 15.0978 1.69048 17.666 2.60872C19.5037 3.26678 20.8575 4.68884 21.4027 6.39276C20.0969 7.97688 18.9694 9.75568 18.0808 11.6339ZM81.8305 29.247C79.1567 29.7251 75.2447 31.0698 75.7203 33.7591C76.1957 36.448 80.879 39.463 83.5528 38.9846C86.2266 38.5063 88.0087 35.9386 87.5331 33.2496C87.0574 30.5606 84.5043 28.7686 81.8305 29.247ZM79.771 21.5231C79.0954 24.9739 76.6978 27.6497 73.62 28.5889C72.9792 28.7843 72.3086 28.8891 71.6194 28.9251C69.5519 27.4626 67.1871 26.3971 64.6342 25.8376C64.8135 24.6424 64.9071 23.4188 64.9071 22.1733C64.9071 19.5226 64.4846 16.9717 63.706 14.5827C63.9272 14.2621 64.1677 13.9599 64.4299 13.6799C66.6356 11.3248 70.0851 10.3558 73.4586 11.2821C77.4875 12.3883 80.5774 17.4009 79.771 21.5231ZM45.5249 45.0182C46.1783 52.846 52.7019 58.9947 60.6548 58.9947C69.0409 58.9947 75.8397 52.1576 75.8397 43.7235C75.8397 36.4054 70.7208 30.2904 63.8876 28.8002C61.4036 37.2049 54.2933 43.6064 45.5249 45.0182Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="navbar__list" id="nav-menu">
+                        <div class="navbar__item"><a href="blog.html">Блок</a></div>
+                        <div class="navbar__item"><a href="#direction">Курсы</a></div>
+                        <div class="navbar__item"><a href="#footer">Контакты</a></div>
+                        <div class="navbar__item"><a href="about.html">О нас</a></div>
+                        <div class="header__lang_inner">
+                            ЯЗЫК
+                        </div>
+                    </div>
+                    <div class="header__contact_inner">
+                        <a class="contact__item" href="tel:+99890 999 9797">
+                            Наш номер телефона: +99890 999 9797
+                        </a>
+                    </div>
+                    <!--
+                 <li class="language__item">
+                                                <form>
+                                                    <input name="lang" type="radio" id="lang-ru">
+                                                    <label for="lang-ru">Ру</label>
+                                                    <input name="lang" type="radio" id="lang-uz">
+                                                    <label for="lang-uz">O`zbek</label>
+                                                    <input name="lang" type="radio" id="lang-eng">
+                                                    <label for="lang-eng">Eng</label>
+                                                </form>
+                                            </li>
+                                            -->
+                </nav>
+                <div class="header__setting">
+                    <div class="header__lang">
+                        <p>RU</p>
+                        <img src="../assets/images/down_btn.svg">
+                    </div>
+                    <div class="header__contact">
+                        <a class="contact__item" href="tel:+99890 999 9797">
+                            <img src="../assets/images/phone.svg">
+                            <p>+998909999797</p>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+
+    <div id="main-window">
+        <div class="container">
+            <div class="main-window">
+                <div class="main-window__content">
+                    <div class="main-window__title">
+                        <h2>
+                            Школа-профессий будущего
+                        </h2>
+                    </div>
+                    <div class="main-window__btns">
+                        <button type="button" class="colorless-btn registration__btn">
+                            Записаться на курс
+                        </button>
+                        <a href="#playlist" class="player">
+                        </a>
+                    </div>
+                </div>
+
+                <!--            <div class="main-window__img">-->
+                <img src="../assets/images/hat 1.png" class="main-window__img">
+                <!--            </div>-->
+
+            </div>
+
+        </div>
+    </div>
+
+    <section id="direction">
+        <div class="container">
+            <div class="direction container">
+                <div class="direction__title d-flex justify-content-center">
+                    <h2>Наши направления</h2>
+                </div>
+                <div class="direction__wrapper d-flex justify-content-between row">
+                    <button type="button" class="colorless-btn  col-1">Все</button>
+                    <button type="button" class="colorless-btn col-2">Дизайн</button>
+                    <button type="button" class="colorless-btn col-3">Программирование</button>
+                    <button type="button" class="colorless-btn col-2">Маркетинг</button>
+                </div>
+                <div class="second-block__informations-containers">
+                    <div class="second-block__informations-container informations-container">
+                        <div class="informations-container__title">
+                            <h3>Уровень сложности</h3>
+                        </div>
+                        <div class="informations-container__inputs informations-container-inputs">
+                            <ul class="informations-container-inputs__list">
+                                <li class="informations-container-inputs__item">
+                                    <label for="input1">
+                                        <input checked type="radio" name="difficulty level" id="input1"
+                                            class="informations-container__inputs__item">
+                                        <span for="difficult level" class="check-style"></span>
+                                        Любой
+                                    </label>
+                                </li>
+                                <li class="informations-container-inputs__item">
+                                    <label for="input2">
+                                        <input type="radio" name="difficulty level" id="input2"
+                                            class="informations-container__inputs__item">
+                                        <span class="check-style"></span>
+                                        Для новичков
+                                    </label>
+                                </li>
+                                <li class="informations-container-inputs__item">
+                                    <label for="input3">
+                                        <input type="radio" name="difficulty level" id="input3"
+                                            class="informations-container__inputs__item">
+                                        <span class="check-style"></span>
+                                        Для профессионалов
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="informations-container__decor">
+                        <img src="/assets/images/second-block/stick.svg" alt="">
+                    </div>
+                    <div class="second-block__informations-container">
+                        <div class="informations-container__title">
+                            <h3>Тип курса</h3>
+                        </div>
+                        <div class="informations-container__inputs informations-container-inputs">
+                            <ul class="informations-container-inputs__list">
+                                <li class="informations-container-inputs__item">
+                                    <label for="input4">
+                                        <input type="radio" name="course type" id="input4"
+                                            class="informations-container__inputs__item">
+                                        <span class="check-style"></span>
+                                        Любой
+                                    </label>
+                                </li>
+                                <li class="informations-container-inputs__item">
+                                    <label for="input5">
+                                        <input type="radio" name="course type" id="input5"
+                                            class="informations-container__inputs__item">
+                                        <span class="check-style"></span>
+                                        Профессиия
+                                    </label>
+                                </li>
+                                <li class="informations-container-inputs__item">
+                                    <label for="input6">
+                                        <input type="radio" name="course type" id="input6"
+                                            class="informations-container__inputs__item">
+                                        <span class="check-style"></span>
+                                        Курс
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="informations-container__decor">
+                        <img src="/assets/images/second-block/stick.svg" alt="">
+                    </div>
+                    <div class="second-block__informations-container informations-container">
+                        <div class="informations-container__title">
+                            <h3>Длительность</h3>
+                        </div>
+                        <input type="range" min="1" max="12" value="6" class="informations-container-input__range">
+                        <p>От 1 до 12 месяцев</p>
+                        <button class="informations-container__button">
+                            Применить фильтр
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="saerch-result">
+        <div class="container">
+            <div class="saerch-result d-flex flex-column">
+                <div class="saerch-result__title direction__title d-flex justify-content-center">
+                    <h2>Результаты поиска</h2>
+                </div>
+                <div class="search-result__wrapper">
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="teachers">
+        <div class="container">
+            <div class="teachers d-flex flex-row">
+                <div class="teachers__substance d-flex flex-column justify-content-between col-5">
+                    <div class="teachers__title">
+                        <h2>Наши <span>препода-<br>
+                                ватели</span>
+                        </h2>
+
+                    </div>
+                    <div class="teachers__info">
+                        <div class="teachers__name">
+                            <h3>АЛЕКСАНДРА</h3>
+                        </div>
+                        <div class="teachers__prof">
+                            <p>Графический дизайнер</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="teachers__wrapper col-8">
+                    <div class="teachers__btn">
+                        < </div>
+                            <div class="teachers__img col-12">
+                                <img src="../assets/images/Bluzka-v-muzhskom-st 1.png" alt="">
+                            </div>
+                            <div class="teachers__btn">
+                                >
+                            </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section id="system-way">
+        <div class="container">
+            <div class="system-way">
+                <div class="system-way__title">
+                    <h2>Системный подход <br><span>к образованию</span>
+                    </h2>
+                </div>
+                <div class="system-way__wrapper">
+                    <div class="system-way__wrapper-btn">
+                        <button class="prev colorless-btn">
+                            << /button>
+                    </div>
+
+                    <div class="system-way__cards d-flex flex-row justify-content-between">
+                        <div class="system-way__card col-3 card d-felx flex-column justify-content-between">
+                            <div class="card__logo d-flex align-self-center">
+                                <img src="../assets/images/index-logos/Play_perspective_matte_s 1player.png" alt="">
+                            </div>
+                            <div class="card__title">
+                                <h3>Видеолекции</h3>
+                            </div>
+                        </div>
+                        <div class="system-way__card col-3 card d-felx flex-column justify-content-between">
+                            <div class="card__logo d-flex align-self-center"><img src="#" alt=""></div>
+                            <div class="card__title">
+                                <h3>Практика</h3>
+                            </div>
+                        </div>
+                        <div class="system-way__card col-3 card d-felx flex-column justify-content-between">
+                            <div class="card__logo d-flex align-self-center"><img
+                                    src="../assets/images/index-logos/perspective_matte 4.jpg" alt=""></div>
+                            <div class="card__title">
+                                <h3>Консультации</h3>
+                            </div>
+                        </div>
+                        <div class="system-way__card col-3 card d-felx flex-column justify-content-between">
+                            <div class="card__logo d-flex align-self-center"><img
+                                    src="../assets/images/index-logos/perspective_matte 5.jpg" alt=""></div>
+                            <div class="card__title">
+                                <h3>Сертификат</h3>
+                            </div>
+                        </div>
+                        <div class="system-way__card col-3 card d-felx flex-column justify-content-between">
+                            <div class="card__logo d-flex align-self-center"><img
+                                    src="../assets/images/index-logos/perspective_matte 6.jpg" alt=""></div>
+                            <div class="card__title">
+                                <h3>Трудоустройство</h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="system-way__wrapper-btn">
+                        <button class="next colorless-btn">></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="playlist">
+        <div class="container">
+            <div class="playlist d-flex justify-content-between align-items-center flex-column">
+                <div class="playlist__title">
+                    <h2>Мы на YouTube</h2>
+                </div>
+                <div class="playlist__player youtube d-flex flex-row justify-content-between col-md col-sm col-lg">
+                    <div class="youtube__player d-flex col-12">
+                        <iframe width="560" height="315" style="border-radius: 20px"
+                            src="https://www.youtube-nocookie.com/embed/vFqTeWXi8h8?autoplay=1" srcdoc="
+                            <style>
+                                *{
+                                    padding:0;
+                                    margin:0;
+                                    overflow:hidden
+                                }
+                                html,body{
+                                    height:100%
+                                }
+                                img,span{
+                                    position:absolute;
+                                    
+                                    top:0;
+                                    bottom:0;
+                                    margin:auto;
+                                    height:100%;
+                                }
+                                a{
+                                    display:flex;
+                                    justify-content:center;
+                                    <!-- border-radius:50%;
+                                    box-sizing:border-box; -->
+        
+        
+                                }
+                                img{
+                                    width:100%;
+                                    image-rendering: -webkit-optimize-contrast;
+                                }
+                                span{
+                                    margin:auto;
+                                    border-radius:50%;
+                                    width:67px;
+                                    background-color:white;
+                                    border:6.5px solid rgba(255, 255, 255, 0.25);
+                                    height:67px;
+                                    text-align:center;
+                                    font:45px/1.6 sans-serif;
+                                    color:#ff6b00;
+                                }
+                            </style>
+                            <img  alt='Demo video'
+                             src=https://wetutor.edu.vn/wp-content/uploads/2021/01/hinh-dai-dien-1-750x465.jpg
+                             >
+                            <a id='youtube-link' href=https://www.youtube-nocookie.com/embed/vFqTeWXi8h8?autoplay=1>
+                                
+                                <span>▶</span>
+                            </a>" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="youtube__player d-flex col-lg-6 col-xl-6 col-md-12">
+                        <iframe width="560" height="315" style="border-radius: 20px"
+                            src="https://www.youtube-nocookie.com/embed/vFqTeWXi8h8?autoplay=1" srcdoc="
+                            <style>
+                                *{
+                                    padding:0;
+                                    margin:0;
+                                    overflow:hidden
+                                }
+                                html,body{
+                                    height:100%
+                                }
+                                img,span{
+                                    position:absolute;
+                                    
+                                    top:0;
+                                    bottom:0;
+                                    margin:auto;
+                                    height:100%;
+                                }
+                                a{
+                                    display:flex;
+                                    justify-content:center;
+                                    <!-- border-radius:50%;
+                                    box-sizing:border-box; -->
+        
+        
+                                }
+                                img{
+                                    width:100%;
+                                    image-rendering: -webkit-optimize-contrast;
+                                }
+                                span{
+                                    margin:auto;
+                                    border-radius:50%;
+                                    width:67px;
+                                    background-color:white;
+                                    border:6.5px solid rgba(255, 255, 255, 0.25);
+                                    height:67px;
+                                    text-align:center;
+                                    font:45px/1.6 sans-serif;
+                                    color:#ff6b00;
+                                }
+                            </style>
+                            <img  alt='Demo video'
+                             src=http://bi-school.ru/wp-content/uploads/2017/07/gde-vystupit-biznes-treneru.jpg
+                             >
+                            <a id='youtube-link' href=https://www.youtube-nocookie.com/embed/vFqTeWXi8h8?autoplay=1>
+                                
+                                <span>▶</span>
+                            </a>" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="youtube__player d-flex col-lg-6 col-xl-6 col-md-12 justify-content-end">
+                        <iframe width="560" height="315" style="border-radius: 20px"
+                            src="https://www.youtube-nocookie.com/embed/vFqTeWXi8h8?autoplay=1" srcdoc="
+                            <style>
+                                *{
+                                    padding:0;
+                                    margin:0;
+                                    overflow:hidden
+                                }
+                                html,body{
+                                    height:100%
+                                }
+                                img,span{
+                                    position:absolute;
+                                    
+                                    top:0;
+                                    bottom:0;
+                                    margin:auto;
+                                    height:100%;
+                                }
+                                a{
+                                    display:flex;
+                                    justify-content:center;
+                                    <!-- border-radius:50%;
+                                    box-sizing:border-box; -->
+        
+        
+                                }
+                                img{
+                                    width:100%;
+                                    image-rendering: -webkit-optimize-contrast;
+                                }
+                                span{
+                                    margin:auto;
+                                    border-radius:50%;
+                                    width:67px;
+                                    background-color:white;
+                                    border:6.5px solid rgba(255, 255, 255, 0.25);
+                                    height:67px;
+                                    text-align:center;
+                                    font:45px/1.6 sans-serif;
+                                    color:#ff6b00;
+                                }
+                            </style>
+                            <img  alt='Demo video'
+                             src=https://s3.amazonaws.com/gex.lifeandstyle/uploads/image/file/5309/consultor-01.jpg
+                             >
+                            <a id='youtube-link' href=https://www.youtube-nocookie.com/embed/vFqTeWXi8h8?autoplay=1>
+                                
+                                <span>▶</span>
+                            </a>" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen title="Demo video">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="main-ifo">
+        <div class="container">
+            <div class="main-info d-flex ">
+                <div class="main-info__content d-flex flex-column justify-content-between ">
+                    <div class="main-info__title">
+                        <h2><b>Учебный</b> процесс</h2>
+                    </div>
+                    <div class="main-info__subtitle">
+                        очное, проходит на территории школы. Занятия проводятся на русском языке.
+                    </div>
+                    <div class="main-info__topic">
+                        <b> Все кабинеты полностью оборудованы:</b> студентам мы предоставляем ноутбуки на время
+                        обучения, в
+                        кабинетах есть <b>проекторы с высоким разрешением, а также кондиционер.</b>
+                    </div>
+                </div>
+                <div class="main-info__img">
+                    <img src="../assets/images/image 4.png">
+                </div>
+            </div>
+
+            <div class="main-info d-flex ">
+                <div class="main-info__content d-flex flex-column justify-content-between">
+                    <div class="main-info__title">
+                        <h2><b>Студенты</b></h2>
+                    </div>
+                    <div class="main-info__subtitle">
+                        очное, проходит на территории школы. Занятия проводятся на русском языке.
+                    </div>
+                    <div class="main-info__topic">
+                        <p><b> Все кабинеты полностью оборудованы:</b> студентам мы предоставляем ноутбуки на время
+                            обучения, в
+                            кабинетах есть <b>проекторы с высоким разрешением, а также кондиционер.</b>
+                        </p>
+                        <p>С собой необходимо брать только флешку.</p>
+                    </div>
+                </div>
+                <div class="main-info__img">
+                    <img src="../assets/images/image 8.png">
+                </div>
+            </div>
+
+            <div class="main-info d-flex ">
+                <div class="main-info__content d-flex flex-column justify-content-between ">
+                    <div class="main-info__title">
+                        <h2><b>Видео</b></h2>
+                    </div>
+                    <div class="main-info__subtitle">
+                        очное, проходит на территории школы. Занятия проводятся на русском языке.
+                    </div>
+                    <div class="main-info__topic">
+                        <b> Все кабинеты полностью оборудованы:</b> студентам мы предоставляем ноутбуки на время
+                        обучения, в
+                        кабинетах есть <b>проекторы с высоким разрешением, а также кондиционер.</b>
+                    </div>
+                </div>
+                <div class="youtube__player main-info__img">
+                    <iframe width="598" height="598" style="border-radius: 20px"
+                        src="https://www.youtube-nocookie.com/embed/vFqTeWXi8h8?autoplay=1" srcdoc="
+                    <style>
+                        *{
+                            padding:0;
+                            margin:0;
+                            overflow:hidden
+                        }
+                        html,body{
+                            height:100%
+                        }
+                        img,span{
+                            position:absolute;
+                            
+                            top:0;
+                            bottom:0;
+                            margin:auto;
+                            height:100%;
+                        }
+                        a{
+                            display:flex;
+                            justify-content:center;
+                            <!-- border-radius:50%;
+                            box-sizing:border-box; -->
+
+
+                        }
+                        img{
+                            width:100%;
+                            image-rendering: -webkit-optimize-contrast;
+                        }
+                        span{
+                            margin:auto;
+                            border-radius:50%;
+                            width:67px;
+                            background-color:white;
+                            border:6.5px solid rgba(255, 255, 255, 0.25);
+                            height:67px;
+                            text-align:center;
+                            font:45px/1.6 sans-serif;
+                            color:#ff6b00;
+                        }
+                    </style>
+                    <img  alt='Demo video'
+                     src='../assets/images/image 11.png'
+                     >
+                    <a id='youtube-link' href=https://www.youtube-nocookie.com/embed/vFqTeWXi8h8?autoplay=1>
+                        
+                        <span>▶</span>
+                    </a>" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="registration">
+        <div class="container">
+            <div class="registration d-flex justify-content-center flex-column">
+                <div class="registration__title d-flex justify-content-center">
+                    <h2>
+                        Подать заявку
+                    </h2>
+                </div>
+                <div class="d-flex justify-content-center modal__input">
+                    <form class="registration__modal d-flex col-10 flex-column justify-content-between">
+                        <div class="registration__username d-flex justify-content-between">
+                            <input type="text" class="d-flex col-5" placeholder="Enter Name" name="name" required>
+                            <input type="text" class="d-flex col-6" placeholder="Enter Surname" name="surname" required>
+                        </div>
+                        <div class="registration__contact d-flex justify-content-between flex-row">
+                            <div class="registration__contact-info d-flex justify-content-between flex-column col-7">
+                                <input type="email" placeholder="E-mail адрес" name="email" required>
+                                <input type="tel" placeholder="Ваш нлмер телефона:+xx xxx xxx-xx-xx" name="tel"
+                                    pattern="[\+]\d{3}\s\d{2}\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="16" maxlength="18"
+                                    required>
+                            </div>
+                            <div class="registration__contact-img d-flex col-3">
+                                <img src="../assets/images/icons/mail.png">
+                            </div>
+                        </div>
+                        <button class="d-flex col-2 justify-content-center align-items-center" type="submit">Отправить
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer">
+                <div class="row  footer-top">
+                    <ul class="col footer-top__list">
+                        <li class="footer-top__item footer-top-item">
+                            <h3 class="footer-top-item__title">Курсы</h3>
+                        </li>
+                        <li class="footer-top__item">
+                            <a href="#">
+                                Дизайн
+                            </a>
+                        </li>
+                        <li class="footer-top__item">
+                            <a href="#">
+                                Програмирование
+                            </a>
+                        </li>
+                        <li class="footer-top__item">
+                            <a href="#">
+                                Маркетинг
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="col footer-top__list">
+                        <li class="footer-top__item footer-top-item">
+                            <h3 class="footer-top-item__title">Дизайн</h3>
+                        </li>
+                        <li class="footer-top__item">
+                            <a href="#">
+                                Графический Дизайн
+                            </a>
+                        </li>
+                        <li class="footer-top__item">
+                            <a href="#">
+                                UX/UI Дизайн
+                            </a>
+                        </li>
+                        <li class="footer-top__item">
+                            <a href="#">
+                                Моушен дизайн
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="col footer-top__list">
+                        <li class="footer-top__item footer-top-item">
+                            <h3 class="footer-top-item__title">Маркетинг</h3>
+                        </li>
+                        <li class="footer-top__item">
+                            <a href="#">
+                                Цифровой Маркетинг
+                            </a>
+                        </li>
+                        <li class="footer-top__item">
+                            <a href="#">
+                                SMM Pro
+                            </a>
+                        </li>
+                        <li class="footer-top__item">
+                            <a href="#">
+                                Youtube
+                            </a>
+                        </li>
+                        <li class="footer-top__item">
+                            <a href="#">
+                                Targeting
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__bottom footer-bottom">
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="footer-bottom__left">
+                                <div class="site-logo">
+                                    <img src="../assets/images/logo-img.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="footer-bottom__right">
+                                <a href="" class="network-link">
+                                    <img src="../assets/images/footer/meta.svg" alt="">
+                                </a>
+                                <a href="" class="network-link">
+                                    <img src="../assets/images/footer/insta.svg" alt="">
+                                </a>
+                                <a href="" class="network-link">
+                                    <img src="../assets/images/footer/telegram.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/scripts/nav_control.js"></script>
+    <script src="../assets/scripts/wrapper.js"></script>
+
+
+
+</body>
+
+</html>

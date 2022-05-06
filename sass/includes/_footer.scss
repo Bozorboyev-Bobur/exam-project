@@ -1,0 +1,146 @@
+* {
+	box-sizing: border-box;
+	font-family: "Century Gothic", sans-serif;
+  }
+  
+  ul,
+  li,
+  a,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  button,
+  p {
+	text-decoration: none;
+	list-style: none;
+	color: inherit;
+	font-size: inherit;
+  }
+  
+  button {
+	padding: 1;
+	margin: 0;
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+  }
+  
+  * {
+	box-sizing: border-box;
+  }
+  
+  body {
+	font-family: "Century Gothic";
+	margin: 0;
+	padding: 0;
+	width: 1920px;
+  }
+  
+  .center {
+	margin: 0 auto;
+	// min-width: 1216px;
+	width: 1216px;
+  }
+  
+  :root {
+	--orange: #ff6b00;
+	--white: #fff;
+	--black: #444444;
+	--dark__orange: #f65c2c;
+	--regular-font: "Century Gothic";
+	--bold-font: "Century Gothic-bold";
+  }
+  
+  body {}
+
+#footer {
+	background-image: url(/assets/images/footer/bg-img.svg);
+    background-repeat: no-repeat;
+    padding: 269px 0 0 0;
+    height: 742px;
+	width: 1920px;
+
+}
+
+.footer {
+	width: 1216px;
+
+	&__bottom {
+		margin-top: 166px;
+	}
+}
+
+.row {}
+
+.footer-top {
+	height: 301px;
+
+	&__list {}
+
+	&__item {
+		font-size: 1.9em;
+		color: var(--white);
+		font-weight: 300;
+		font-family: var(--regular-font);
+		margin-bottom: 18px;
+	}
+}
+
+.col {}
+
+.footer-top-item {
+
+	&__title {
+		margin: 0 0 40px 0;
+		font-size: 2.5rem;
+		color: var(--white);
+	}
+}
+
+.footer-bottom {
+
+	&__left {}
+
+	&__right {
+		margin: 11px 0;
+	}
+}
+
+.col-8 {}
+
+.site-logo {}
+
+.col-4 {}
+
+.network-link:not(:last-child) {
+	margin-right: 20px
+}
+// @media (max-width: 1000px) {
+// 	.footer {
+// 		// width: 1000px;
+// 		height: 275px;
+// 	}
+//     .footer-top {
+//     //   max-width: 720px;
+//       /* flex-direction: column; */
+//     }
+//     .footer-top-item__title {
+//       font-size: 2.1rem;
+//     }
+//     .footer-top__item {
+//       font-size: 1.7rem;
+//     }
+//     .footer-top__list {
+//       flex-direction: column;
+//       width: auto;
+//     }
+//     // .row {
+//     //   /* flex: 1 1 100%; */
+//     //   flex-direction: column;
+//     //   flex-wrap: nowrap;
+//     //   justify-content: center;
+//     // }
+//   }

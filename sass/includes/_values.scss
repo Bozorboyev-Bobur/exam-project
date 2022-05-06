@@ -1,0 +1,38 @@
+@import "./fonts";
+
+:root {
+  --orange: #ff6b00;
+  --white: #fff;
+  --black: #262626;
+  --dark__orange: #f65c2c;
+  --light__orange: #ff8730;
+  --regular-font: "Century Gothic";
+  --bold-font: "Century Gothic-bold";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Century Gothic";
+  position: relative;
+  min-width: 1200px;
+  * {
+    font-family: inherit;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1216px;
+}

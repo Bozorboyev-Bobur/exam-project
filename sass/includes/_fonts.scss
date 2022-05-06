@@ -1,0 +1,14 @@
+@each $weight in (400, 700) {
+    @font-face {
+        @if $weight==400 {
+            font-style: normal;
+            src: url("../../assets/fonts/Century Gothic/centurygothic.ttf") format("ttf");
+        } @else {
+            font-style: bold;
+            src: url("../../assets/fonts/Century Gothic/centurygothic_bold.ttf") format("ttf");
+        }
+        font-family: "Century Gothic", 'Segoe UI',SegoeUI,'Helvetica Neue',Helvetica,Arial,sans-serif;;
+        font-weight: $weight;
+        font-display: swap;
+    }
+}

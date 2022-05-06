@@ -1,0 +1,383 @@
+@import url(../assets/css/fonts.css);
+@import "./includes/blog-page_header.scss";
+@import "./includes/blog-pge_footer";
+* {
+    box-sizing: border-box;
+    font-family: "Century Gothic", sans-serif;
+}
+
+ul,
+li,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+p,
+div,
+span {
+    text-decoration: none;
+    list-style: none;
+    color: #444444;
+    font-size: inherit;
+}
+
+button {
+    padding: 1;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Century Gothic";
+    margin: 0 auto;
+    padding: 0;
+}
+
+:root {
+    --orange: #ff6b00;
+    --white: #fff;
+    --black: #262626;
+    --dark__orange: #f65c2c;
+    --regular-font: "Century Gothic";
+    --bold-font: "Century Gothic-bold";
+}
+p {
+    color: #868686;
+
+}
+
+
+
+
+.container{
+	max-width: 1216px;
+	margin: 0px auto;
+	padding: 0px 15px;
+}
+.first-line {
+      margin-top: 84px;
+      display: flex;
+      width: 1216px;
+      justify-content: space-between;
+
+		&__card {
+            width: 392px;
+		}
+}
+.card {
+
+		&__img {
+            width: 392px;
+            height: 214px;
+            border-radius: 20px;
+		}
+
+		&__title {
+            font-size: 20px;
+            font-family: "Century Gothic";
+            font-weight: 700, bold;
+            line-height: 25px;
+            color: #444444;
+            margin-top: 15px;
+            margin-bottom: 15px;
+		}
+
+		&__subtitle {
+            font-size: 15px;
+            // font-family: "Century Gothic";
+            font-weight: 400;
+            line-height: 18px;
+            // color: #868686;
+            height: 72px;
+
+		}
+
+		&__info {
+		}
+}
+.card-info {
+
+		&__date {
+            font-size: 15px;
+            // font-family: "Century Gothic";
+            font-weight: 400;
+            line-height: 18px;
+            // color: #868686;
+            margin-bottom: 10px;
+		}
+
+		&__views-commits {
+            display: flex;
+            align-items: center;
+		}
+}
+.views-commits {
+      margin-bottom: 61px;
+		&__views {
+            display: flex;
+            margin-right: 9px;
+		}
+
+		&__commits {
+            display: flex;
+		}
+}
+.amount-details {
+      font-size: 10px;
+      line-height: 12px;
+      font-weight: 400;
+      margin-left: 4px;
+
+}
+.second-line {
+      display: flex;
+      justify-content: space-between;
+      width: 1216px;
+		&__card {
+		}
+}
+.second-line-card {
+
+		&__img {
+                  width: 598px;
+                  height: 322px;
+                  border-radius: 20px;
+		}
+
+		&__title {
+                  font-size: 20px;
+                  font-family: "Century Gothic";
+                  font-weight: 700, bold;
+                  line-height: 25px;
+                  color: #444444;
+                  margin-top: 15px;
+                  margin-bottom: 15px;
+		}
+
+		&__subtitle {
+                  font-size: 15px;
+                  font-weight: 400;
+                  line-height: 18px;
+                  height: 36px;
+		}
+
+}
+.second-line-card-info {
+      display: flex;
+		&__date {
+                  font-size: 15px;
+                  // font-family: "Century Gothic";
+                  font-weight: 400;
+                  line-height: 18px;
+                  margin-right: 15px;
+                  margin-top: 51px;
+		}
+
+		&__views-commits {
+                  display: flex;
+                  align-items: center;
+                  height: 18px;
+                  margin-top: 57px;
+
+		}
+}
+.img {
+      width: 13px;
+}
+.third-line {
+      display: flex;
+      width: 1216px;
+      justify-content: space-between;
+		&__card {
+                  width: 291px;
+		}
+}
+.third-line-card {
+
+		&__img {
+                  width: 291px;
+                  height: 214px;
+                  border-radius: 20px;
+		}
+
+		&__title {
+                  font-size: 20px;
+                  font-weight: 700, bold;
+                  line-height: 25px;
+                  color: #444444;
+                  margin-top: 15px;
+                  margin-bottom: 40px;
+                  height: 50px;
+		}
+
+		&__subtitle {
+                  font-size: 15px;
+                  font-weight: 400;
+                  line-height: 18px;
+                  height: 72px;
+                  margin-bottom: 15px;
+		}
+
+		&__info {
+		}
+}
+.third-line-card-info {
+
+		&__date {
+                  font-size: 15px;
+                  font-weight: 400;
+                  line-height: 18px;
+                  margin-bottom: 11px;
+		}
+
+		&__views-commits {
+                  display: flex;
+		}
+}
+@media (max-width: 1216px) {
+      .container{
+            max-width: 962px;
+            margin: 0px auto;
+            padding: 0px 15px;
+      }
+      .first-line {
+            display: flex;
+            width: 960px;
+            justify-content: space-between;
+        
+                    &__card {
+                    width: 310px;
+                    }
+      }
+      .card {
+
+		&__img {
+            width: 310px;
+            height: 169px;
+            border-radius: 20px;
+		}
+
+		&__title {
+            font-size: 16px;
+            font-weight: 700, bold;
+            line-height: 19px;
+            color: #444444;
+            margin-top: 12px;
+            margin-bottom: 12px;
+		}
+
+		&__subtitle {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 15px;
+            height: 57px;
+
+		}
+
+
+      }
+      .card-info {
+
+		&__date {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 15px;
+            margin-bottom: 8px;
+		}
+      }
+      .views-commits {
+            margin-bottom: 61px;
+                  &__views {
+                  margin-right: 7px;
+                  }
+      }
+      .amount-details {
+            font-size: 8px;
+            line-height: 10px;
+            margin-left: 3px;
+      
+      }
+      .second-line {
+            width: 960px;
+      }
+      .second-line-card {
+
+		&__img {
+                  width: 470px;
+                  height: 253px;
+		}
+
+		&__title {
+                  font-size: 16px;
+                  line-height: 19px;
+                  margin-top: 40px;
+                  margin-bottom: 16px;
+		}
+
+		&__subtitle {
+                  font-size: 12px;
+                  line-height: 15px;
+                  height: 30px;
+		}
+
+      }
+      .second-line-card-info {
+            display: flex;
+                  &__date {
+                        font-size: 12px;
+                        line-height: 15px;
+                        margin-top: 28px;
+                  }
+      
+                  &__views-commits {
+                        height: 12px;
+                        margin-top: 31px;
+      
+                  }
+      }
+      .third-line {
+            width: 960px;
+                  &__card {
+                        width: 291px;
+                        margin-right: 45px;
+                  }
+      }
+      .third-line-card {
+		&__title {
+                  font-size: 16px;
+                  line-height: 19px;
+                  margin-bottom: 46px;
+                  height: 19px;
+		}
+
+		&__subtitle {
+                  font-size: 12px;
+                  line-height: 15px;
+                  height: 45px;
+                  margin-bottom: 50px;
+		}
+      }
+      .third-line-card-info {
+            display: flex;
+		&__date {
+                  font-size: 15px;
+                  line-height: 18px;
+		}
+
+		&__views-commits {
+                  display: flex;
+		}
+      }
+}
+
+

@@ -1,108 +1,230 @@
-.header-top {
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    min-height: 60px;
-    justify-content: space-between;
-    font-family: "Century Gothic-bold";
+//$position: absolute;
+//$text-color: white;
+//$bg-color: transparent;
+$logo-color: white;
+@mixin navbar($position: sticky, $text-color: black, $bg-color: white) {
+  width: 1216px;
+  max-height: 59px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @if ($position==absolute) {
+    margin-top: 100px;
+    position: $position;
+    z-index: 1;
+  }
+  //padding-top: 6.25em;
+  * {
+    color: $text-color;
+  }
+  background-color: $bg-color;
 }
 
-.logo {
+@mixin id_header($position: sticky) {
+  @if ($position==sticky) {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+  }
+}
 
-    &__img {
-        width: 218px;
+.header {
+  .site-logo {
+    max-width: 215.87px;
+    max-height: 59px;
+    //color: $text-color;
+
+    svg {
+      width: 100%;
+
+      path {
+        fill: $logo-color;
+      }
     }
-}
+
+    h1 {
+      display: none;
+    }
+  }
+  .nav-active {
+    display: flex;
+    flex-direction: column;
+    width: 573px !important;
+    max-height: 1726px !important;
+    opacity: 1;
+    position: fixed;
+    top: 8px;
+    right: 394px;
+    height: 100%;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+    background-image: url(../images/navbar-b.png);
+    background-repeat: no-repeat;
+    background-color: #fff;
+    @media (max-width: 1000px) /*and (max-width) */ {
+      .navbar__list {
+        margin: 85px auto;
+        max-height: 322px;
+        height: 100%;
+        width: 177px;
+        position: relative;
+        display: flex;
+        transition: all 0.5s;
+        justify-content: space-between;
+        align-items: center;
+        .navbar__item {
+          display: flex;
+          justify-content: center;
+          * {
+            text-align: center;
+          }
+        }
+      }
+
+      .site-logo_inner {
+        display: flex !important;
+        margin: 65px 0 0 25px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header__contact_inner {
+        display: flex !important;
+        position: absolute !important;
+        bottom: 0;
+        left: 0;
+        margin: 30px;
+      }
+    }
+  }
 
 .navbar {
+  width: 404.01px;
+  max-height: 25px;
+  margin: auto;
 
-    &__list {
+  .site-logo_inner,
+  .header__contact_inner,
+  .header__lang_inner {
+    display: none;
+    position: relative;
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media (max-width: 1000px) {
+      display: none;
+      justify-content: center;
+      flex-direction: column;
+    }
+    @media (max-width: 480px) {
+      .header__lang_inner {
         display: flex;
-        align-items: center;
-
+        flex-direction: row;
+      }
     }
 
     &__item {
-        background-image: linear-gradient(currentColor, currentColor);
-        background-position: 0% 100%;
-        background-repeat: no-repeat;
-        background-size: 0% 3px;
-        transition:.3s;
-
-        &:not(:last-child) {
-            margin-right: 40px;
-        }
-
-        &:hover {
-            background-size: 100% 3px;
-        }
+      display: flex;
+      justify-content: center;
     }
+  }
 }
+  &__setting {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    width: 305px;
+    @media (max-width: 1000px) {
+      margin-right: 20px+27px/2;
+    }
+  }
 
-.header-top-right {
+  &__lang,
+  &__contact > a {
     display: flex;
     align-items: center;
+    flex-direction: row;
+  }
 
-    &__burger {
-        display: none;
+  &__lang {
+    img {
+      width: 20.79px;
+      height: 21px;
+      margin-left: 10px;
     }
+
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
+
+  &__contact {
+    //width: 295.93px;
+    margin-right: 10px;
+
+    img {
+      width: 28.72px;
+      height: 29px;
+      margin-right: 12.87px;
+    }
+
+    @media all and(max-width:768px) {
+      display: none;
+    }
+  }
+
+  .burger-menu {
+    display: none;
+    cursor: pointer;
+    //display: flex;
+    justify-content: space-between;
+    margin-left: 36px;
+    flex-direction: column;
+    align-self: center;
+    position: relative;
+    max-width: 27px;
+    height: 20px;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+
+    &-active {
+      position: absolute;
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+      background-image: url(../images/icons/exit-btn.svg);
+      background-repeat: no-repeat;
+      z-index: 2;
+      span {
+        background-color: transparent !important;
+      }
+    }
+
+    span {
+      background-color: $logo-color;
+      top: 18px;
+      left: 0;
+      display: block;
+      width: 27px;
+      height: 2px;
+    }
+
+    @media (max-width: 1000px) {
+      display: flex;
+      right: 35px;
+      margin-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+      right: 160px;
+    }
+  }
 }
 
-.language {
-    display: flex;
-    align-items: center;
-    margin-right: 40px;
-    flex-wrap: wrap;
-
-    &__label {
-        margin-right: 30px;
-        display: flex;
-        line-height: 20px;
-        align-items: end;
-
-        & input {
-            display: none;
-        }
-    }
-
-    &__check-style {
-        position: absolute;
-        width: 19px;
-        height: 19px;
-        border-radius: 50%;
-        border: 2px solid var(--white);
-        margin-left: 30px;
-        transition: 0.1s;
-    }
-
-    & input:checked+&__check-style {
-        content: '';
-        border: solid 5px var(--white)
-    }
-}
-
-.contact {
-    display: flex;
-    align-items: center;
-
-    &__img {
-        width: 24px;
-        height: 24px;
-        margin-right: 25px;
-    }
-
-    &__img:hover {
-        -webkit-animation: shake .1s ease-in-out .1s infinite alternate;
-
-        @-webkit-keyframes shake {
-            from {
-                -webkit-transform: rotate(20deg);
-            }
-
-            to {
-                -webkit-transform: rotate(-20deg);
-                -webkit-transform-origin: center;
-            }
-        }
-    }
-}
