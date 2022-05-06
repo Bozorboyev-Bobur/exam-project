@@ -1,0 +1,47 @@
+.footer {
+  background: url(/assets/images/blog-page/Vector\ 12.svg) no-repeat;
+  background-size: cover;
+  height: 742px;
+  width: 100%;
+  padding-top: 269px;
+}
+.footer__list {
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+  color: white;
+}
+.footer__item {
+  display: grid;
+  color: white;
+  z-index: 100;
+}
+.footer__title {
+  font-family: "Century Gothic-bold";
+  font-size: 2.5rem;
+  margin-bottom: 53px;
+  z-index: 100;
+  color: white;
+}
+.footer__link {
+  font-size: 1.875rem;
+  font-family: "Roboto";
+  z-index: 100;
+  color: white;
+}
+.footer__bottom {
+  width: 1500px;
+  justify-content: space-between;
+}
+
+.site-logo {
+  margin-top: 100px;
+}
+
+.col-4 {
+  margin-top: 100px;
+  width: 160px;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=blog-pge_footer.css.map */

@@ -1,0 +1,447 @@
+@import url(../assets/css/fonts.css);
+.header-top {
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  justify-content: space-between;
+  font-family: "Century Gothic-bold";
+}
+
+.logo__img {
+  width: 218px;
+}
+
+.navbar__list {
+  display: flex;
+  align-items: center;
+}
+.navbar__item {
+  font-size: 15px;
+}
+.navbar__item:not(:last-child) {
+  margin-right: 40px;
+}
+.navbar__link:hover {
+  color: #F65C2C;
+  transition: 0.5s;
+}
+
+.header-top-right {
+  display: flex;
+  align-items: center;
+}
+.header-top-right__burger {
+  display: none;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  flex-wrap: wrap;
+}
+.language__label {
+  margin-right: 30px;
+  display: flex;
+  line-height: 20px;
+  align-items: end;
+}
+.language__label input {
+  display: none;
+}
+.language__check-style {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  border: 2px solid var(--black);
+  margin-left: 30px;
+  transition: 0.1s;
+}
+.language input:checked + .language__check-style {
+  content: "";
+  border: solid 5px var(--black);
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  background: url(/assets/images/blog-page/Vector\ 12.svg) no-repeat;
+  background-size: cover;
+  height: 742px;
+  width: 100%;
+  padding-top: 269px;
+}
+.footer__list {
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+  color: white;
+}
+.footer__item {
+  display: grid;
+  color: white;
+  z-index: 100;
+}
+.footer__title {
+  font-family: "Century Gothic-bold";
+  font-size: 2.5rem;
+  margin-bottom: 53px;
+  z-index: 100;
+  color: white;
+}
+.footer__link {
+  font-size: 1.875rem;
+  font-family: "Roboto";
+  z-index: 100;
+  color: white;
+}
+.footer__bottom {
+  width: 1500px;
+  justify-content: space-between;
+}
+
+.site-logo {
+  margin-top: 100px;
+}
+
+.col-4 {
+  margin-top: 100px;
+  width: 160px;
+  justify-content: space-between;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Century Gothic", sans-serif;
+}
+
+ul,
+li,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+p,
+div,
+span {
+  text-decoration: none;
+  list-style: none;
+  color: #444444;
+  font-size: inherit;
+}
+
+button {
+  padding: 1;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Century Gothic";
+  margin: 0 auto;
+  padding: 0;
+}
+
+:root {
+  --orange: #ff6b00;
+  --white: #fff;
+  --black: #262626;
+  --dark__orange: #f65c2c;
+  --regular-font: "Century Gothic";
+  --bold-font: "Century Gothic-bold";
+}
+
+p {
+  color: #868686;
+}
+
+.container {
+  max-width: 1216px;
+  margin: 0px auto;
+  padding: 0px 15px;
+}
+
+.first-line {
+  margin-top: 84px;
+  display: flex;
+  width: 1216px;
+  justify-content: space-between;
+}
+.first-line__card {
+  width: 392px;
+}
+
+.card__img {
+  width: 392px;
+  height: 214px;
+  border-radius: 20px;
+}
+.card__title {
+  font-size: 20px;
+  font-family: "Century Gothic";
+  font-weight: 700, bold;
+  line-height: 25px;
+  color: #444444;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.card__subtitle {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  height: 72px;
+}
+.card-info__date {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+.card-info__views-commits {
+  display: flex;
+  align-items: center;
+}
+
+.views-commits {
+  margin-bottom: 61px;
+}
+.views-commits__views {
+  display: flex;
+  margin-right: 9px;
+}
+.views-commits__commits {
+  display: flex;
+}
+
+.amount-details {
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.second-line {
+  display: flex;
+  justify-content: space-between;
+  width: 1216px;
+}
+.second-line-card__img {
+  width: 598px;
+  height: 322px;
+  border-radius: 20px;
+}
+.second-line-card__title {
+  font-size: 20px;
+  font-family: "Century Gothic";
+  font-weight: 700, bold;
+  line-height: 25px;
+  color: #444444;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.second-line-card__subtitle {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  height: 36px;
+}
+
+.second-line-card-info {
+  display: flex;
+}
+.second-line-card-info__date {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-right: 15px;
+  margin-top: 51px;
+}
+.second-line-card-info__views-commits {
+  display: flex;
+  align-items: center;
+  height: 18px;
+  margin-top: 57px;
+}
+
+.img {
+  width: 13px;
+}
+
+.third-line {
+  display: flex;
+  width: 1216px;
+  justify-content: space-between;
+}
+.third-line__card {
+  width: 291px;
+}
+
+.third-line-card__img {
+  width: 291px;
+  height: 214px;
+  border-radius: 20px;
+}
+.third-line-card__title {
+  font-size: 20px;
+  font-weight: 700, bold;
+  line-height: 25px;
+  color: #444444;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  height: 50px;
+}
+.third-line-card__subtitle {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  height: 72px;
+  margin-bottom: 15px;
+}
+.third-line-card-info__date {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 11px;
+}
+.third-line-card-info__views-commits {
+  display: flex;
+}
+
+@media (max-width: 1216px) {
+  .container {
+    max-width: 962px;
+    margin: 0px auto;
+    padding: 0px 15px;
+  }
+
+  .first-line {
+    display: flex;
+    width: 960px;
+    justify-content: space-between;
+  }
+  .first-line__card {
+    width: 310px;
+  }
+
+  .card__img {
+    width: 310px;
+    height: 169px;
+    border-radius: 20px;
+  }
+  .card__title {
+    font-size: 16px;
+    font-weight: 700, bold;
+    line-height: 19px;
+    color: #444444;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  .card__subtitle {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    height: 57px;
+  }
+
+  .card-info__date {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    margin-bottom: 8px;
+  }
+
+  .views-commits {
+    margin-bottom: 61px;
+  }
+  .views-commits__views {
+    margin-right: 7px;
+  }
+
+  .amount-details {
+    font-size: 8px;
+    line-height: 10px;
+    margin-left: 3px;
+  }
+
+  .second-line {
+    width: 960px;
+  }
+
+  .second-line-card__img {
+    width: 470px;
+    height: 253px;
+  }
+  .second-line-card__title {
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+  .second-line-card__subtitle {
+    font-size: 12px;
+    line-height: 15px;
+    height: 30px;
+  }
+
+  .second-line-card-info {
+    display: flex;
+  }
+  .second-line-card-info__date {
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 28px;
+  }
+  .second-line-card-info__views-commits {
+    height: 12px;
+    margin-top: 31px;
+  }
+
+  .third-line {
+    width: 960px;
+  }
+  .third-line__card {
+    width: 291px;
+    margin-right: 45px;
+  }
+
+  .third-line-card__title {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 46px;
+    height: 19px;
+  }
+  .third-line-card__subtitle {
+    font-size: 12px;
+    line-height: 15px;
+    height: 45px;
+    margin-bottom: 50px;
+  }
+
+  .third-line-card-info {
+    display: flex;
+  }
+  .third-line-card-info__date {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .third-line-card-info__views-commits {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=blog.css.map */
